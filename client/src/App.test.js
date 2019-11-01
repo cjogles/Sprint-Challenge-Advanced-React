@@ -28,6 +28,6 @@ test('Player renders without crashing', () => {
 
 test("LocaleStorage is working without crashing", () => {
   const {getTestById} = render(<App/>);
-  fireEvent.click(getEventById(dark-btn));
+  fireEvent.click(getTestById(dark-btn));
 })
 
