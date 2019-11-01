@@ -8,21 +8,21 @@ import Fifa from './components/Fifa'
 import PlayerCardList from './components/PlayerCardList';
 import Player from './components/Player';
 
-it('renders without crashing', () => {
+test('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('Fifa renders without crashing', () => {
+test('Fifa renders without crashing', () => {
   render(<Fifa />);
 });
 
-it('PlayerCardList renders without crashing', () => {
+test('PlayerCardList renders without crashing', () => {
   render(<PlayerCardList />);
 });
 
-it('Player renders without crashing', () => {
+test('Player renders without crashing', () => {
   render(<Player />);
 });
 

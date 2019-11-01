@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Player = (props) => {
-    console.log(props.playerdata)
     return (
         <div>
             <h1>{props.playerdata.name}</h1>
