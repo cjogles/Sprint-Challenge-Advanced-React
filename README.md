@@ -22,10 +22,26 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Why would you use class component over function components (removing hooks from the question)?
-- [ ] Name three lifecycle methods and their purposes.
-- [ ] What is the purpose of a custom hook?
-- [ ] Why is it important to test our apps?
+- [x] Why would you use class component over function components (removing hooks from the question)?
+
+      Removing Hooks from the equation, it would be important to use class components when you want to manage certain moments of context in the form of memory
+      which we call STATE. You then can manipulate this memory inside the class component with different life cylce methods. 
+
+- [x] Name three lifecycle methods and their purposes.
+
+      Constructor() -->         Begins the life of the component. Gives you the ability to obtain properties from any components that the main component extends
+                                from. You can define State variables here.
+      Render() -->              Render method is in charge of painting the user interface that the component at hand is responsible for to the screen via the                             DOM.
+      componentDidMount() -->   After the constructor method runs and the render method, the componentDidMount() method runs and if you wanted to do something
+                                once after the component is painted this would be a very good place to do that, maybe make an API call to re-render some state or really anything.
+
+- [x] What is the purpose of a custom hook?
+
+      A custom hook is used to take state logic (usually a large amount) and consolidate it into one single place to help organize state logic and make code more dry. (aka dont repeat yourself)
+
+- [x] Why is it important to test our apps?
+
+      Testing apps saves money, time, and probably the validity and reliability of the app itself. Testing apps thouroughly increases confidence in the power of the code written. 
 
 ## Project Set Up
 
