@@ -26,7 +26,7 @@ test('Player renders without crashing', () => {
   render(<Player />);
 });
 
-test("LocaleStorage is working without crashing", () => {
+test("darkmode is working without crashing", () => {
   const {getTestById} = render(<App/>);
   fireEvent.click(getTestById(dark-btn));
 })
