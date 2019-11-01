@@ -1,23 +1,33 @@
 import React from 'react';
-import './App.css';
 import Fifa from './components/Fifa';
 import { useDarkMode } from './hooks/useDarkMode';
+import './index.css';
 
 function App() {
+
   const [darkMode, setDarkMode] = useDarkMode(false);
   const toggleMode = e => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
+
   return (
-    <div className="App">
-      <div className="dark-mode__toggle">
-        <button
-          onClick={toggleMode}
-          className={darkMode ? 'toggle toggled' : 'toggle'}>dark-mode</button>
+
+    <>
+      <nav className="navBar">
+        <div className="dark-mode__toggle">
+          <div
+            data-testid="dark-btn"
+            onClick={toggleMode}
+            className={darkMode ? 'toggle toggled' : 'toggle'}>
+          </div>
+        </div>
+      </nav>
+      <div className="App">
         <Fifa />
       </div>
-    </div>
+    </>
+
   );
 }
 

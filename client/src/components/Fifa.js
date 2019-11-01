@@ -23,12 +23,13 @@ class Fifa extends React.Component {
     }
 
     render() {
+
         return(
-            <nav className="navBar">
-                <div className="App">
-                    {this.state.loaded ? <PlayerCardList data={this.state.data} /> : null}
-                </div>
-            </nav>
+
+            <div>
+                {this.state.loaded ? <PlayerCardList data={this.state.data} /> : null}
+            </div>
+            
         )
     }
 }
