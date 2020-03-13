@@ -1,9 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { render, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 
-it('renders without crashing', () => {
+import App from './App';
+import Fifa from './components/Fifa'
+import PlayerCardList from './components/PlayerCardList';
+import Player from './components/Player';
+
+test('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+test('Fifa renders without crashing', () => {
+  render(<Fifa />);
+});
+
+test('PlayerCardList renders without crashing', () => {
+  render(<PlayerCardList />);
+});
+
+test('Player renders without crashing', () => {
+  render(<Player />);
+});
+
+test("darkmode is working without crashing", () => {
+  const {getTestById} = render(<App/>);
+  fireEvent.click(getTestById(dark-btn));
+})
+
